@@ -11,10 +11,27 @@ class PratoEntity
 
     private ?float $peso;
 
+    private int $unidades = 0;
+
     private ?int $serveQtdPessoas;
 
     public function __construct() {
 
+    }
+
+    public function setUnidades(int $unidades)
+    {
+        $this->unidades = $unidades;
+    }
+
+    public function getUnidades():int
+    {
+        return $this->unidades;
+    }
+
+    public function addUnidade()
+    {
+        $this->unidades++;
     }
 
     public function setServeQtdPessoas(int $serveQtdPessoas)
@@ -65,5 +82,10 @@ class PratoEntity
     public function getNome(): string
     {
         return $this->nome;
+    }
+
+    public function getTotal()
+    {
+        return $this->preco * $this->unidades;
     }
 }

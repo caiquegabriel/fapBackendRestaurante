@@ -7,6 +7,8 @@ class RestauranteEntity
 
     private ?string $nome;
 
+    private ?string $descricao;
+
     public function __construct() {
 
     }
@@ -19,6 +21,16 @@ class RestauranteEntity
     public function setNome(string $nome)
     {
         $this->nome = $nome;
+    }
+
+    public function setDescricao(string $descricao)
+    {
+        $this->descricao = $descricao;
+    }
+
+    public function getDescricao(): string
+    {
+        return $this->descricao;
     }
 
     public function getId(): int
