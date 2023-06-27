@@ -1,6 +1,10 @@
 <?php if (!isset($menu)) die(); ?>
 
-<h1>Checkout | <a href="index.php?page=menu">Voltar ao menu</a></h1>
+<h1 style="text-align: center !important;"><?= $restaurante->getNome() ?></h1>
+<p style="text-align: center !important;"><?= $restaurante->getDescricao() ?></p>
+<p style="font-size: 19.6px; text-align: center !important;"><strong>Olá,</strong> <?= $cliente->getNome() ?></p>
+<h3> <a href="index.php?page=menu">< Voltar</a>  | Checkout</h3>
+
 <ul>
 <?php foreach ($menu->getPratos() as $prato): ?>
     <?php if ($prato->getUnidades() > 0): ?>

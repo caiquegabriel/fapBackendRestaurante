@@ -4,10 +4,15 @@ session_start();
 require("./entity/RestauranteEntity.php");
 require("./entity/PratoEntity.php");
 require("./entity/MenuEntity.php");
+require("./entity/ClienteEntity.php");
 
 $restaurante = new RestauranteEntity();
 $restaurante->setNome('Pé de Cabra');
 $restaurante->setDescricao('Desde de 2023 fazendo tradição');
+
+$cliente = new ClienteEntity();
+$cliente->setNome('Caíque Gabriel');
+$cliente->setTelefone('(88) 8 8888-8888');
 
 $prato1 = new PratoEntity();
 $prato1->setId(1);
