@@ -19,11 +19,6 @@ class PratoEntity
 
     }
 
-    public function setUnidades(int $unidades)
-    {
-        $this->unidades = $unidades;
-    }
-
     public function getUnidades():int
     {
         return $this->unidades;

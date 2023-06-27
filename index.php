@@ -7,7 +7,7 @@ require("./entity/MenuEntity.php");
 require("./entity/ClienteEntity.php");
 
 $restaurante = new RestauranteEntity();
-$restaurante->setNome('Pé de Cabra');
+$restaurante->setNome('Restaurante Pé de Cabra');
 $restaurante->setDescricao('Desde de 2023 fazendo tradição');
 
 $cliente = new ClienteEntity();
@@ -109,6 +109,9 @@ switch ($page) {
         $_SESSION['items'] = $items;
 
         header('Location: index.php?page=checkout');
+    break;
+    default:
+        header('Location: index.php?page=menu');
     break;
 }
 ?>
