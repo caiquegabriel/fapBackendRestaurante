@@ -11,6 +11,7 @@ $restaurante->setNome('Pé de Cabra');
 $restaurante->setDescricao('Desde de 2023 fazendo tradição');
 
 $cliente = new ClienteEntity();
+$cliente->setId(1);
 $cliente->setNome('Caíque Gabriel');
 $cliente->setTelefone('(88) 8 8888-8888');
 
@@ -73,6 +74,8 @@ switch ($page) {
                 break;
             }
         }
+
+        $total = $prato1->getTotal() + $prato2->getTotal() + $prato3->getTotal() + $prato4->getTotal();
 
         include('html/checkout.php');
     break;

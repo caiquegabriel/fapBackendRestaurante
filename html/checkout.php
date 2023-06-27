@@ -18,3 +18,9 @@
     <?php endif; ?>
 <?php endforeach; ?>
 </ul>
+
+<?php if($total > 0): ?>
+<p style="font-size: 15px; color: #000; padding: 10px; margin: 10px 0px 10px 30px;">
+    Valor total do pedido <strong style="font-size: 19px !important;">R$ <?= $total ?></strong>
+</p>
+<?php endif; ?>
